@@ -1,0 +1,101 @@
+.hero-section {
+  padding: 25px;
+}
+.hero {
+  @include DisplayFlex($justify: space-between, $align: start, $gap: 0px);
+}
+.hero__content-wrapper {
+  padding: 110px 0;
+  max-width: 420px;
+}
+.hero__title {
+  @include FontStyle(
+    $weight: 700,
+    $w-size: 40px,
+    $height: 60px,
+    $clr: $clr_text
+  );
+  margin-bottom: 18px;
+}
+.hero__text {
+  @include FontStyle(
+    $weight: 400,
+    $w-size: 18px,
+    $height: 28px,
+    $clr: $clr_text
+  );
+  margin-bottom: 45px;
+}
+.hero__btn-start {
+  @include BtnStyle(
+    $font-size: 16px,
+    $radius: 4px,
+    $bg-color: $clr-green,
+    $color: $clr-white,
+    $padding: 15px 41px
+  );
+  margin-right: 31px;
+}
+.hero__btn-watch {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: underline;
+  border: 0;
+  background-color: $clr-white;
+  color: $clr-green;
+}
+.hero__bg-image {
+  max-width: 600px;
+}
+
+@media (max-width: 1050px) {
+  .hero {
+    @include DisplayFlex($justify: center, $align: center, $gap: 40px);
+    flex-direction: column-reverse;
+  }
+
+  .hero__content-wrapper {
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero__content-wrapper {
+    padding: 30px 0;
+  }
+
+  .hero__title {
+    @include FontStyle(
+      $weight: 700,
+      $w-size: 36px,
+      $height: 60px,
+      $clr: $clr_text
+    );
+    margin-bottom: 18px;
+  }
+
+  .hero__text {
+    @include FontStyle(
+      $weight: 400,
+      $w-size: 15px,
+      $height: 25px,
+      $clr: $clr_text
+    );
+    margin-bottom: 45px;
+  }
+
+  .hero__btn-start {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero__btn-watch {
+    text-align: left;
+  }
+  .hero__bg-image {
+    max-width: 300px;
+  }
+}

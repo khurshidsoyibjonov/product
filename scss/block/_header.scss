@@ -1,0 +1,80 @@
+.site-header {
+  padding: 20px 0;
+}
+.header {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 0px);
+}
+.header__right {
+  @include DisplayFlex($justify: start, $align: center, $gap: 24px);
+}
+
+.header__right nav {
+  @include DisplayFlex($justify: start, $align: start, $gap: 30px);
+}
+
+.header__nav-link {
+  @include FontStyle(
+    $weight: 600,
+    $w-size: 18px,
+    $height: 28px,
+    $clr: $clr_text
+  );
+  opacity: 0.8;
+  transition: all 0.3s;
+  &:hover {
+    color: $clr-btn-text;
+    opacity: 1;
+    text-decoration: underline;
+  }
+}
+
+.active {
+  opacity: 1;
+}
+.header__btn-sign-in {
+  @include BtnStyle(
+    $font-size: 16px,
+    $radius: 8px,
+    $bg-color: $clr-white,
+    $color: $clr-btn-text,
+    $padding: 8px 16px
+  );
+}
+.header__btn-sign-up {
+  @include BtnStyle(
+    $font-size: 16px,
+    $radius: 8px,
+    $bg-color: $clr-green,
+    $color: $clr-white,
+    $padding: 8px 16px
+  );
+}
+
+.menu-icon {
+  background-color: transparent;
+  border: 0;
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .header__right nav {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__btn-sign-in {
+    display: none;
+  }
+  .header__btn-sign-up {
+    display: none;
+  }
+
+  .header__right .mode-icon {
+    display: none;
+  }
+}

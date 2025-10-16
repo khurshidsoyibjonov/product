@@ -1,0 +1,37 @@
+.product-section {
+  padding: 100px 0;
+}
+.product {
+}
+.product__title-wrapper {
+  max-width: 539px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 64px;
+}
+.product__title {
+  @include FontStyle(
+    $weight: 700,
+    $w-size: 34px,
+    $height: 60px,
+    $clr: $clr_text
+  );
+}
+.product__content-wrapper {
+  @include DisplayFlex($justify: space-between, $align: center, $gap: 0px);
+}
+.product__content-box {
+  width: 240px;
+}
+.product__content-suptitle {
+  @include FontStyle(
+    $weight: 600,
+    $w-size: 22px,
+    $height: 100%,
+    $clr: $clr_text
+  );
+  margin-top: 30px;
+}
+.product__content-suptext {
+  padding-right: 30px;
+}

@@ -1,0 +1,31 @@
+@mixin DisplayFlex($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin BtnStyle($font-size, $radius, $bg-color, $color, $padding) {
+  font-weight: 600;
+  font-size: $font-size;
+  border: 0;
+  border-radius: $radius;
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid $color;
+  padding: $padding;
+
+  &:hover {
+    color: $bg-color;
+    background-color: $color;
+    border: 1px solid $bg-color;
+  }
+}
+
+@mixin FontStyle($weight, $w-size, $height, $clr) {
+  font-family: Poppins;
+  font-weight: $weight;
+  font-size: $w-size;
+  line-height: $height;
+  color: $clr;
+}
