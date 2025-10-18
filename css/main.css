@@ -792,9 +792,7 @@ body {
     padding: 50px 0;
   }
   .feedback__text-wrapper {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
   }
   .feedback__content-wrapper {
     display: flex;
