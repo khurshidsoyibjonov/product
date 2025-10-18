@@ -29,3 +29,10 @@
   line-height: $height;
   color: $clr;
 }
+
+@mixin GridBox($colmun, $row, $gap) {
+  display: grid;
+  grid-template-columns: $colmun;
+  grid-auto-rows: $row;
+  gap: $gap;
+}
